@@ -1,0 +1,13 @@
+
+version: 2
+
+sources:
+  - name: silver
+    meta:
+      external_location: "C:/Users/Ayushi Sinha/Downloads/finrecon-ai/data/silver/{name}/{name}.parquet"
+
+    tables:
+      - name: orders
+      - name: payments
+      - name: refunds
+      - name: settlements

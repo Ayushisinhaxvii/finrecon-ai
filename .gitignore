@@ -1,0 +1,40 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# Generated and local datasets
+data/
+!data/README.md
+
+# Local audit and runtime metadata
+metadata/*.jsonl
+metadata/*.log
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.bak
+
+# Build artifacts
+dbt/finrecon/target/
+dbt/finrecon/logs/
+dbt/logs/
+
+# Local vector indexes
+data/vector_store/
+
+# Local backups
+app_backup.txt

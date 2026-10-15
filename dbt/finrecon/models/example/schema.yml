@@ -1,0 +1,49 @@
+
+version: 2
+
+models:
+  - name: stg_payments
+    columns:
+      - name: payment_id
+        data_tests:
+          - not_null
+          - unique
+      - name: amount
+        data_tests:
+          - not_null
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: amount
+        data_tests:
+          - not_null
+
+  - name: stg_refunds
+    columns:
+      - name: refund_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_id
+        data_tests:
+          - not_null
+      - name: refund_amount
+        data_tests:
+          - not_null
+
+  - name: stg_settlements
+    columns:
+      - name: settlement_id
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_id
+        data_tests:
+          - not_null
+      - name: settlement_amount
+        data_tests:
+          - not_null
